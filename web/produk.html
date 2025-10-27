@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manajemen Produk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-semibold text-gray-700">Kasir Go - Produk</h1>
+    <a href="dashboard.html" class="text-blue-600 hover:underline">← Dashboard</a>
+  </nav>
+
+  <div class="max-w-5xl mx-auto p-6">
+    <!-- Form Tambah Produk -->
+    <div class="bg-white shadow-lg rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-semibold mb-4">Tambah Produk</h2>
+      <form id="produkForm" class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-600 mb-1">Nama Produk</label>
+          <input type="text" id="nama" class="w-full border rounded-lg p-2" placeholder="Nama produk" required>
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">Harga</label>
+          <input type="number" id="harga" class="w-full border rounded-lg p-2" placeholder="Harga" required>
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">Stok</label>
+          <input type="number" id="stok" class="w-full border rounded-lg p-2" placeholder="Stok" required>
+        </div>
+        <div>
+          <label class="block text-gray-600 mb-1">ID Kategori</label>
+          <input type="number" id="kategori_id" class="w-full border rounded-lg p-2" placeholder="ID kategori" required>
+        </div>
+        <div class="col-span-2 text-right">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow">
+            Simpan Produk
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tabel Produk -->
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-xl font-semibold mb-4">Daftar Produk</h2>
+      <table class="min-w-full border text-left">
+        <thead>
+          <tr class="bg-blue-100 text-gray-700">
+            <th class="py-2 px-3 border">ID</th>
+            <th class="py-2 px-3 border">Nama</th>
+            <th class="py-2 px-3 border">Harga</th>
+            <th class="py-2 px-3 border">Stok</th>
+            <th class="py-2 px-3 border">Kategori</th>
+            <th class="py-2 px-3 border text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="produkTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/produk.js"></script>
+</body>
+</html>

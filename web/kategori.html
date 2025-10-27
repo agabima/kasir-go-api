@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kategori Produk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-700">Kelola Kategori</h1>
+    <div>
+      <a href="dashboard.html" class="text-gray-600 hover:text-blue-600 mx-2">Dashboard</a>
+      <a href="produk.html" class="text-gray-600 hover:text-blue-600 mx-2">Produk</a>
+    </div>
+  </nav>
+
+  <main class="p-6">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow">
+      <h2 class="text-lg font-semibold mb-4">Tambah Kategori</h2>
+      <div class="flex gap-2">
+        <input id="namaKategori" type="text" class="flex-1 border p-2 rounded-lg" placeholder="Nama kategori..." />
+        <button onclick="tambahKategori()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Tambah</button>
+      </div>
+
+      <h3 class="text-lg font-semibold mt-6 mb-2">Daftar Kategori</h3>
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-gray-100 text-left">
+            <th class="border p-2">ID</th>
+            <th class="border p-2">Nama</th>
+            <th class="border p-2">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="kategoriTable"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/kategori.js"></script>
+</body>
+</html>
